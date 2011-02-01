@@ -1,0 +1,26 @@
+Quick start guide.
+
+1. Get ReCAPTCHA KEY.
+http://www.google.com/recaptcha
+
+2. Setting.
+Download recaptchalib.php.
+And put it in recaptcha_plugin/vendors.
+http://code.google.com/p/recaptcha/downloads/list?q=label:phplib-Latest
+
+3. Config.
+Insert keys in recaptcha_plugin/config/key.php .
+	$config = array(
+		'Recaptcha' => array(
+			'Public'  => 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+			'Private' => 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+		),
+	);
+
+4. Controller.
+	public $components = array('RecaptchaPlugin.Recaptcha');
+	public $helpers = array('RecaptchaPlugin.Recaptcha');
+
+5. View.
+	echo $this->Recaptcha->show();
+	echo $this->Recaptcha->error();
