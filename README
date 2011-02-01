@@ -22,5 +22,6 @@ Insert keys in recaptcha_plugin/config/key.php .
 	public $helpers = array('RecaptchaPlugin.Recaptcha');
 
 5. View.
+Between <form> tags:
 	echo $this->Recaptcha->show();
 	echo $this->Recaptcha->error();
