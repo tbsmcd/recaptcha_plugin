@@ -1,6 +1,6 @@
 Quick start guide.
 
-1. Get ReCAPTCHA KEY.
+1. Get reCAPTCHA key.
 http://www.google.com/recaptcha
 
 2. Setting.
@@ -22,6 +22,11 @@ Insert keys in recaptcha_plugin/config/key.php .
 	public $helpers = array('RecaptchaPlugin.Recaptcha');
 
 5. View.
-Between <form> tags:
+Inside <form> tags:
 	echo $this->Recaptcha->show();
 	echo $this->Recaptcha->error();
+
+If you want to use reCAPTCHA theme, you should write like this:
+>	echo $this->Recaptcha->show('white');
+Possible values:'red'|'white'|'blackglass'|'clean';
+Default value: 'red';
