@@ -4,6 +4,7 @@ class ValidationBehavior extends ModelBehavior {
 		$model->validate['recaptcha_response_field'] = array(
 			'checkRecaptcha' => array(
 				'rule' => array('checkRecaptcha', 'recaptcha_challenge_field'),
+				'required' => true,
 				'message' => 'You did not enter the words correctly. Please try again.',
 			),
 		);

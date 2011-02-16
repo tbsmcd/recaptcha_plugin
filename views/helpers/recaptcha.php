@@ -6,7 +6,7 @@ class RecaptchaHelper extends Helper {
 		if (empty($theme) || !in_array($theme, array('red', 'white', 'blackglass', 'clean'))) {
 			$theme = 'red';
 		}
-		App::import('Vender', 'RecaptchaPlugin.recaptchalib');
+		App::import('Vendor', 'RecaptchaPlugin.recaptchalib');
 		Configure::load('RecaptchaPlugin.key');
 		$publickey = Configure::read('Recaptcha.Public');
 		$html = '<script type="text/javascript">var RecaptchaOptions = {theme : \'' . $theme . '\'};</script>';
