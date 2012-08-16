@@ -1,5 +1,9 @@
 <?php
-class RecaptchaComponent extends Object {
+App::uses('Component', 'Controller');
+
+class RecaptchaComponent extends Component {
+
+	
 	function startup(&$controller) {
 		$modelClass = $controller->modelClass;
 		if (!empty($controller->params['form']['recaptcha_challenge_field']) && !empty($controller->params['form']['recaptcha_response_field'])) {
@@ -11,3 +15,4 @@ class RecaptchaComponent extends Object {
 
 	}
 }
+
