@@ -1,12 +1,12 @@
 <?php
-class RecaptchaHelper extends Helper {
+class RecaptchaHelper extends AppHelper {
 	public $helpers = array('Form');
 
 	function show($theme = null) {
 		if (empty($theme) || !in_array($theme, array('red', 'white', 'blackglass', 'clean'))) {
 			$theme = 'red';
 		}
-		App::import('Vendor', 'RecaptchaPlugin.recaptchalib');
+		App::import('Vendor', 'Recaptcha.recaptchalib');
 		Configure::load('RecaptchaPlugin.key');
 		$publickey = Configure::read('Recaptcha.Public');
 		$html = '<script type="text/javascript">var RecaptchaOptions = {theme : \'' . $theme . '\'};</script>';

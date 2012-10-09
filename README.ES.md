@@ -1,7 +1,7 @@
-Quick start guide.
+Guia rápida de uso
 ================================================================================
 
-1. Get reCAPTCHA key.
+1. Obten una clave reCAPTCHA.
 --------------------------------------------------------------------------------
  - <http://www.google.com/recaptcha>
 
